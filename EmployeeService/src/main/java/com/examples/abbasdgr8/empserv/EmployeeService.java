@@ -1,5 +1,6 @@
 package com.examples.abbasdgr8.empserv;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ public class EmployeeService {
     
     @WebMethod
     public List<Employee> getAllEmployees() {
-        return (List<Employee>) organization.values();
+        return new ArrayList<Employee>(organization.values());
     }
     
     EmployeeService() {
